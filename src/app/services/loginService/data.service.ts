@@ -13,6 +13,11 @@ export class DataService {
     return this.http.get<People[]>(`http://localhost:8080/get`);
   }
 
+  postUserData(people:People)
+  {
+    return this.http.post<People>(`http://localhost:8080/post`,people)
+  }
+
 
 
 }
