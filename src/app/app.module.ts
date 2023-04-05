@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HousesComponent } from './houses/houses.component';
 import { HeaderComponent } from './header/header.component';
+import { PropertyformComponent } from './propertyform/propertyform.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeaderComponent } from './header/header.component';
     LoginComponent,
     SignupComponent,
     HousesComponent,
-    HeaderComponent
+    HeaderComponent,
+    PropertyformComponent
   ],
   imports: [
     BrowserModule,

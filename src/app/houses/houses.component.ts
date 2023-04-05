@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { People } from '../login/login.component';
 import { DataService } from '../services/loginService/data.service';
 
@@ -11,9 +11,15 @@ import { DataService } from '../services/loginService/data.service';
 export class HousesComponent implements OnInit {
   id:number=-1;
   people:People=new People();
-  constructor(private route:ActivatedRoute,private service:DataService)
+  constructor(private route:ActivatedRoute,private service:DataService,private router:Router)
   {
 
+  }
+
+  handleAdd()
+  {
+    console.log("Entered propertyhandler");
+    this.router.navigate(['propertiesform',this.id]);
   }
 
   ngOnInit(): void {
