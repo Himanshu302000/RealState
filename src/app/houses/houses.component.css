@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap');
+.parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+    background-color: rgb(247, 94, 94);
+    background-image:linear-gradient(red,yellow), url(https://images.pexels.com/photos/276514/pexels-photo-276514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover; 
+    
+}
+.center{
+    color: aliceblue;
+    font-family: 'Alkatra', cursive;
+    width: 60%;
+}
+.bottom{
+    display: flex;
+    padding: 10px;
+    margin-top: 50px;
+}
+.options{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: gray;
+    color: aliceblue;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}

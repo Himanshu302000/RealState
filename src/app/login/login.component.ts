@@ -14,6 +14,7 @@ export class LoginComponent {
   constructor(private service:DataService,private route: Router){}
   ngOnInit(): void {};
   validLogin:boolean=false;
+  index:number=-1;
   authenticate()
   {
     console.log("Authentication granted"+this.people.email+" "+this.people.password)
@@ -24,12 +25,14 @@ export class LoginComponent {
         if(this.people.email===this.data[i].email && this.people.password===this.data[i].password)
         {
           this.validLogin=true;
+          this.index=this.data[i].id;
           break;
         }
       }
       if(this.validLogin)
       {
-        this.route.navigate(['houses']);
+        sessionStorage.setItem('authenticateUser',this.people.email);
+        this.route.navigate(['houses',this.index]);
       }
     })
   }

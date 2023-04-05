@@ -18,6 +18,11 @@ export class DataService {
     return this.http.post<People>(`http://localhost:8080/post`,people)
   }
 
+  getDataById(id:number)
+  {
+    return this.http.get<People>(`http://localhost:8080/getById/${id}`);
+  }
+
 
 
 }

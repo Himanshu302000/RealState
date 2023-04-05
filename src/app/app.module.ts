@@ -8,13 +8,15 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HousesComponent } from './houses/houses.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    HousesComponent
+    HousesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
