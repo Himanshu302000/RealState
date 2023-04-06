@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { People } from '../login/login.component';
 import { Properties } from '../propertyform/propertyform.component';
 import { DataService } from '../services/loginService/data.service';
@@ -16,7 +16,14 @@ export class OwnerComponent implements OnInit {
   ownerId:number=-1;
   propertyId=-1;
   property_details:Properties=new Properties();
-  constructor(private dataservice:DataService,private route:ActivatedRoute,private propertyservice:PropertiesServiceService){}
+  constructor(private dataservice:DataService,private route:ActivatedRoute,private propertyservice:PropertiesServiceService,
+    private router:Router){}
+
+  handleOwnerProperties(id:number)
+  {
+    this.router.navigate(['ownerproperties',id]);
+  }
+
   ngOnInit(): void {
     this.ownerId=this.route.snapshot.params['userId'];
     this.propertyId=this.route.snapshot.params['id'];

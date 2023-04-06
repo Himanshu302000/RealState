@@ -21,4 +21,9 @@ export class PropertiesServiceService {
   {
     return this.http.get<Properties>(`http://localhost:8080/getPropertyById/${id}`);
   }
+
+  getPropertiesByUserId(id:number)
+  {
+    return this.http.get<Properties[]>(`http://localhost:8080/getPropertyByUserId/${id}`);
+  }
 }
