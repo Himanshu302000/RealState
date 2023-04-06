@@ -1,0 +1,24 @@
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<body>
+    <h1>News Card</h1>
+<div class="container">
+    <div class="cardcontainer" *ngFor="let item of data">
+        <div class="photo">
+            <img src={{item.url}}>
+            <div class="photos">Photos</div>
+        </div>
+        <div class="content">
+            <p class="txt4">{{item.address}}</p>
+            <p class="txt5">{{item.furnished}}</p>
+            <p class="txt2">{{item.description}}</p>
+        </div>
+        <div class="footer">
+            <p><a class="waves-effect waves-light btn" (click)="handleOwner(item.userId,item.id)"  >Get Owner Details</a><a id="heart"><span class="like"><i class="fab fa-gratipay"></i>Like</span></a></p>
+            <p class="txt3"><i class="far fa-clock"></i>10 Minutes Ago <span class="comments"><i class="fas fa-comments"></i>45 Comments</span></p>
+        </div>
+    </div>
+</div>
+</body>
+<!--  -->

@@ -42,7 +42,7 @@ export class People{
   constructor(){}
   id:number=-1;
   password:String='';
-  name:string='';
+  name:string;
   email:string='';
 
 }

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HousesComponent } from './houses/houses.component';
 import { LoginComponent } from './login/login.component';
+import { OwnerComponent } from './owner/owner.component';
+import { PropertycardComponent } from './propertycard/propertycard.component';
 import { PropertyformComponent } from './propertyform/propertyform.component';
 import { RouteGuardServiceService } from './services/security/route-guard-service.service';
 import { SignupComponent } from './signup/signup.component';
@@ -26,6 +28,19 @@ const routes: Routes = [
     path:'propertiesform/:id',
     component:PropertyformComponent,
     canActivate:[RouteGuardServiceService]
+  }
+  ,
+  {
+    path:'propertycard',
+    component:PropertycardComponent,
+    canActivate:[RouteGuardServiceService]
+  }
+  ,
+  {
+    path:'owner/:userId/:id',
+    component:OwnerComponent,
+    canActivate:[RouteGuardServiceService]
+
   }
 ];
 

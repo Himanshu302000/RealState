@@ -10,6 +10,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HousesComponent } from './houses/houses.component';
 import { HeaderComponent } from './header/header.component';
 import { PropertyformComponent } from './propertyform/propertyform.component';
+import { PropertycardComponent } from './propertycard/propertycard.component';
+import { OwnerComponent } from './owner/owner.component';
+import { OwnerpropertiesComponent } from './ownerproperties/ownerproperties.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { PropertyformComponent } from './propertyform/propertyform.component';
     SignupComponent,
     HousesComponent,
     HeaderComponent,
-    PropertyformComponent
+    PropertyformComponent,
+    PropertycardComponent,
+    OwnerComponent,
+    OwnerpropertiesComponent
   ],
   imports: [
     BrowserModule,

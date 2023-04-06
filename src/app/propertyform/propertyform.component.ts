@@ -43,5 +43,7 @@ export class Properties{
   phone:string='';
   userId:number=-1;
   id:number=-1;
+  description:string='';
+  furnished='';
 
 }

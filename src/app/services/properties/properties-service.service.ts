@@ -13,4 +13,12 @@ export class PropertiesServiceService {
   {
     return this.http.post<Properties>(`http://localhost:8080/postProperty`,prop)
   }
+  getAllData()
+  {
+    return this.http.get<Properties[]>(`http://localhost:8080/getProperties`);
+  }
+  getPropertyById(id:number)
+  {
+    return this.http.get<Properties>(`http://localhost:8080/getPropertyById/${id}`);
+  }
 }
