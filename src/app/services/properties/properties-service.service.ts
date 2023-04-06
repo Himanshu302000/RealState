@@ -26,4 +26,9 @@ export class PropertiesServiceService {
   {
     return this.http.get<Properties[]>(`http://localhost:8080/getPropertyByUserId/${id}`);
   }
+
+  updateProperty(property:Properties)
+  {
+    return this.http.put(`http://localhost:8080/updateProperty`,property);
+  }
 }

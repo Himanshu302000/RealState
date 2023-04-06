@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { People } from '../login/login.component';
 import { DataService } from '../services/loginService/data.service';
 import { PropertiesServiceService } from '../services/properties/properties-service.service';
@@ -15,7 +15,8 @@ export class PropertyformComponent implements OnInit {
   newProperty:Properties=new Properties();
   id:number=-1;
   constructor(private route:ActivatedRoute,private service:DataService,
-    private propertyservice:PropertiesServiceService){}
+    private propertyservice:PropertiesServiceService,
+    private router:Router){}
 
   ngOnInit(): void {
     this.id=this.route.snapshot.params['id']
@@ -32,6 +33,7 @@ export class PropertyformComponent implements OnInit {
     this.propertyservice.postUserData(this.newProperty).subscribe(res=>{
       console.log(res.name);
       alert("Property Successfully Added");
+      this.router.navigate(['propertycard']);
     })
   }
 

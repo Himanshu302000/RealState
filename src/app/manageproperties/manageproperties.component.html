@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<body>
+    <h1>Your Properties</h1>
+<div class="container">
+    <div class="cardcontainer" *ngFor="let item of data">
+        <div class="photo">
+            <img src={{item.url}}>
+            <div class="photos">Photos</div>
+        </div>
+        <div class="content">
+            <p class="txt4">{{item.address}}</p>
+            <p class="txt5">{{item.furnished}}</p>
+            <p class="txt2">{{item.description}}</p>
+        </div>
+        <div class="footer">
+            <p><a class="waves-effect waves-light btn" (click)="handleUpdate(item.id)"><i class="fa-regular fa-pen-to-square"></i>Update</a><a id="heart"><span class="like"><i class="fab fa-gratipay"></i>Like</span></a></p>
+        </div>
+    </div>
+</div>
+</body>
+<!--  -->

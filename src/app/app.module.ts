@@ -13,6 +13,8 @@ import { PropertyformComponent } from './propertyform/propertyform.component';
 import { PropertycardComponent } from './propertycard/propertycard.component';
 import { OwnerComponent } from './owner/owner.component';
 import { OwnerpropertiesComponent } from './ownerproperties/ownerproperties.component';
+import { ManagepropertiesComponent } from './manageproperties/manageproperties.component';
+import { UpdateformComponent } from './updateform/updateform.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { OwnerpropertiesComponent } from './ownerproperties/ownerproperties.comp
     PropertyformComponent,
     PropertycardComponent,
     OwnerComponent,
-    OwnerpropertiesComponent
+    OwnerpropertiesComponent,
+    ManagepropertiesComponent,
+    UpdateformComponent
   ],
   imports: [
     BrowserModule,
