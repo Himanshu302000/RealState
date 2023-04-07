@@ -31,7 +31,7 @@ export class LoginComponent {
       }
       if(this.validLogin)
       {
-        sessionStorage.setItem('authenticateUser',this.people.email);
+        sessionStorage.setItem('authenticateUser',this.people.id+"");
         this.route.navigate(['houses',this.index]);
       }
     })

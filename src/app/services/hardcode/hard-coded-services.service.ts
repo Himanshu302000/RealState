@@ -9,6 +9,7 @@ export class HardCodedServicesService {
 
   isUserLoggedIn(){
     let user = sessionStorage.getItem('authenticateUser');
+    console.log(typeof Number(user)+" "+user);
     return !(user == null);
   }
 

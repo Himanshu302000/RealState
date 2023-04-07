@@ -1,9 +1,11 @@
 <ul>
-    <li><a class="adjust" href="#home">Tg Online Bank</a></li>
-    <li><a class="adjust" href="#news">Home</a></li>
-    <li><a class="adjust" href="#contact">About us</a></li>
-    <li><a class="adjust"href="#contact">Developer Contact</a></li>
+    <li><a class="adjust" >Housing.com</a></li>
+    <li><a class="adjust" >Home</a></li>
+    <li><a class="adjust" >About us</a></li>
+    <li><a class="adjust" >Developer Contact</a></li>
 
-    <li style="float:right"><a class="active adjust " routerLink="login">Login as User</a></li>
-    <li style="float:right"><a class="active adjust"  routerLink="admin">Login as admin</a></li>
+    <li style="float:right"><a class="active adjust" *ngIf="!loggedIn" routerLink="log in">Login</a></li>
+    <li style="float:right"><a class="active adjust"  *ngIf="loggedIn" routerLink="logout">LogOut</a></li>
+    <li style="float:right" *ngIf="loggedIn">aaa</li>
+    <li style="float:right"><a class="active adjust" *ngIf="!loggedIn" routerLink="logout">Register</a></li>
   </ul>

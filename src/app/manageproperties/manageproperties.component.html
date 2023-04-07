@@ -2,6 +2,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <body>
     <h1>Your Properties</h1>
+    <div class="empty" *ngIf="data.length===0">
+        <h4 >
+            You Dont have any Properties
+        </h4>
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-2130356-1800917.png" alt="">
+
+        <button class="btn btn-primary" (click)="handleAdd()"> Add Your Property </button>
+    </div>
+    
 <div class="container">
     <div class="cardcontainer" *ngFor="let item of data">
         <div class="photo">
@@ -14,7 +23,7 @@
             <p class="txt2">{{item.description}}</p>
         </div>
         <div class="footer">
-            <p><a class="waves-effect waves-light btn" (click)="handleUpdate(item.id)"><i class="fa-regular fa-pen-to-square"></i>Update</a><a id="heart"><span class="like"><i class="fab fa-gratipay"></i>Like</span></a></p>
+            <p><a class="waves-effect waves-light btn" (click)="handleUpdate(item.id)"><i class="fa-regular fa-pen-to-square"></i>Update</a><a id="heart"><span class="like btn" (click)="handleDelete(item.id)"><i class="fab fa-gratipay"></i>Delete</span></a></p>
         </div>
     </div>
 </div>

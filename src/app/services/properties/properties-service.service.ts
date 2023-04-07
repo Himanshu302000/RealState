@@ -31,4 +31,9 @@ export class PropertiesServiceService {
   {
     return this.http.put(`http://localhost:8080/updateProperty`,property);
   }
+
+  deleteProperty(id:number)
+  {
+    return this.http.delete(`http://localhost:8080/deleteProperty/${id}`);
+  }
 }

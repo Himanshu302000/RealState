@@ -20,11 +20,34 @@ export class ManagepropertiesComponent implements OnInit {
     console.log("Update id "+ id);
     this.router.navigate(['updateform',id]);
   }
+
+  handleDelete(id:number){
+    console.log("Delete handled");
+    this.propertyservice.deleteProperty(id).subscribe(res=>{
+      console.log("item deleted");
+      this.refreshProperties();
+    })
+  }
+
+  refreshProperties(){
+
+    this.propertyservice.getPropertiesByUserId(this.id).subscribe(res=>{
+      this.data=res;
+      console.log(this.data);
+    })
+
+  }
+
+  handleAdd()
+  {
+    console.log("Handle add items");
+    this.router.navigate(['propertiesform',this.id]);
+  }
   ngOnInit(): void {
     this.id=this.route.snapshot.params['id'];
-      this.propertyservice.getPropertiesByUserId(this.id).subscribe(res=>{
-        this.data=res;
-        console.log(this.data);
-      })
+
+    this.refreshProperties();
+      
   }
+  
 }
