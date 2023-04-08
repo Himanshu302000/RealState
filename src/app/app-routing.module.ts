@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component';
 import { HousesComponent } from './houses/houses.component';
 import { LoginComponent } from './login/login.component';
 import { ManagepropertiesComponent } from './manageproperties/manageproperties.component';
@@ -61,6 +62,13 @@ const routes: Routes = [
   {
     path:'updateform/:id',
     component:UpdateformComponent,
+    canActivate:[RouteGuardServiceService]
+
+  }
+  ,
+  {
+    path:'about',
+    component:AboutComponent,
     canActivate:[RouteGuardServiceService]
 
   }

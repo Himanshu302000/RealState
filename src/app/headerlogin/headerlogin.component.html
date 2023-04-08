@@ -1,7 +1,7 @@
 <ul>
     <li><a class="adjust" >Housing.com</a></li>
     <li><a class="adjust" (click)="handleHome()" >Home</a></li>
-    <li><a class="adjust" >About us</a></li>
+    <li><a class="adjust" (click)="handleAbout()" >About us</a></li>
     <li><a class="adjust" >Developer Contact</a></li>
 
     <li style="float:right"><a class="active adjust" *ngIf="!loggedIn" routerLink="log in">Login</a></li>

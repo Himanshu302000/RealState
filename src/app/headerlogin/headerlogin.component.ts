@@ -22,6 +22,9 @@ export class HeaderloginComponent implements OnInit {
   handleHome(){
     this.router.navigate(['houses',this.id])
   }
+  handleAbout(){
+    this.router.navigate(['about']);
+  }
   ngOnInit(): void {
       if(this.service.isUserLoggedIn())
       {
