@@ -4,12 +4,11 @@ import { HardCodedServicesService } from '../services/hardcode/hard-coded-servic
 import { DataService } from '../services/loginService/data.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-headerlogin',
+  templateUrl: './headerlogin.component.html',
+  styleUrls: ['./headerlogin.component.css']
 })
-export class HeaderComponent implements OnInit {
-
+export class HeaderloginComponent implements OnInit {
   loggedIn:boolean=false;
   id:number=-1;
   people:People;
@@ -18,12 +17,11 @@ export class HeaderComponent implements OnInit {
       if(this.service.isUserLoggedIn())
       {
         this.loggedIn=true;
-        console.log("true");
-      }
-      else{
-        this.loggedIn=false;
-        console.log("false");
+        this.id=Number(sessionStorage.getItem('authenticateUser'));
+        console.log(this.id+"-----------");
+        this.dataservice.getDataById(this.id).subscribe(res=>{
+          this.people=res;
+        })
       }
   }
-
 }

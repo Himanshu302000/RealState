@@ -31,7 +31,7 @@ export class LoginComponent {
       }
       if(this.validLogin)
       {
-        sessionStorage.setItem('authenticateUser',this.people.id+"");
+        sessionStorage.setItem('authenticateUser',this.index+"");
         this.route.navigate(['houses',this.index]);
       }
     })

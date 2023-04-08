@@ -5,6 +5,7 @@
     <li><a class="adjust" >Developer Contact</a></li>
 
     <li style="float:right"><a class="active adjust" *ngIf="!loggedIn" routerLink="log in">Login</a></li>
-    <li style="float:right"><a class="active adjust"  *ngIf="loggedIn" routerLink="logout">LogOut</a></li>
+    <li style="float:right"><a class="active adjust" *ngIf="loggedIn" routerLink="logout">LOGOUT</a></li>
+    <li style="float:right" class="name adjust"><span style="color: aliceblue;"><i class="fas fa-user-alt"></i></span>{{people.name}}</li>
     <li style="float:right"><a class="active adjust" *ngIf="!loggedIn" routerLink="logout">Register</a></li>
   </ul>

@@ -15,6 +15,7 @@ import { OwnerComponent } from './owner/owner.component';
 import { OwnerpropertiesComponent } from './ownerproperties/ownerproperties.component';
 import { ManagepropertiesComponent } from './manageproperties/manageproperties.component';
 import { UpdateformComponent } from './updateform/updateform.component';
+import { HeaderloginComponent } from './headerlogin/headerlogin.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UpdateformComponent } from './updateform/updateform.component';
     OwnerComponent,
     OwnerpropertiesComponent,
     ManagepropertiesComponent,
-    UpdateformComponent
+    UpdateformComponent,
+    HeaderloginComponent
   ],
   imports: [
     BrowserModule,
