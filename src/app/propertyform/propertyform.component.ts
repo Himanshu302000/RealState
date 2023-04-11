@@ -47,5 +47,6 @@ export class Properties{
   id:number=-1;
   description:string='';
   furnished='';
+  likes:number=4;
 
 }

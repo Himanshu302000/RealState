@@ -1,14 +1,57 @@
-<app-headerlogin></app-headerlogin>
+<app-headerlogin class="remaintop"></app-headerlogin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <body>
-    <div class="parent">
-        <div class="top"></div>
-        <div class="center">
-            <h1>Hello <b>{{people.name}}</b> welcome to housing.com. Here you can view Properties and also sell your Properties</h1>
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>Housing<br>.Com</b></h3>
         </div>
-        <div class="bottom">
-            <div class="options" (click)="handleAdd()">Sell Your Property</div>
-            <div class="options" (click)="handleView()">View All Properties For Sale</div>
-            <div class="options" (click)="handleManageProperties()">Manage Your Properties</div>
+        <div class="w3-bar-block">
+            <a  class="w3-bar-item w3-button w3-hover-white text" >Home</a>
+            <a   class="w3-bar-item w3-button w3-hover-white text" (click)="handleAdd()">Sell Your Property</a>
+            <a  class="w3-bar-item w3-button w3-hover-white text" (click)="handleView()">View All Properties For Sale</a>
+            <a   class="w3-bar-item w3-button w3-hover-white text" (click)="handleManageProperties()">Manage Your Properties</a>
+            <a  class="w3-bar-item w3-button w3-hover-white text" routerLink="/about">About Us</a>
+            <a  class="w3-bar-item w3-button w3-hover-white text">Contact</a>
         </div>
-    </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>Company Name</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-jumbo"><b>Housing.com</b></h1>
+            <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg" style="width:100%" onclick="onClick(this)"
+                    alt="White walls with designer chairs">
+                <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%" onclick="onClick(this)"
+                    alt="Light, white and tight scandinavian design">
+                
+            </div>
+
+            <div class="w3-half">
+                <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+                <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+            </div>
+        </div>
+        </div>
 </body>
