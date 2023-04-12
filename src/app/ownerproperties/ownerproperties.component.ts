@@ -15,7 +15,7 @@ export class OwnerpropertiesComponent implements OnInit {
   userId:number;
   data:Properties[];
 
-  people:People;
+  people:People=new People();
   constructor(private propertyservice:PropertiesServiceService,private route:ActivatedRoute,
     private service:DataService){}
   

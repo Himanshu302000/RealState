@@ -32,6 +32,7 @@ export class LoginComponent {
       if(this.validLogin)
       {
         sessionStorage.setItem('authenticateUser',this.index+"");
+        alert("Logged in Successfully")
         this.route.navigate(['houses',this.index]);
       }
     })

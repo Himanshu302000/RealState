@@ -10,7 +10,7 @@ import { PropertiesServiceService } from '../services/properties/properties-serv
 })
 export class ManagepropertiesComponent implements OnInit {
 
-  data:Properties[];
+  data:Properties[]=[];
   id:number=-1;
   constructor(private propertyservice:PropertiesServiceService,private route:ActivatedRoute,
     private router:Router){}

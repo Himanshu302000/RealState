@@ -12,7 +12,7 @@ import { DataService } from '../services/loginService/data.service';
 export class HeaderloginComponent implements OnInit {
   loggedIn:boolean=false;
   id:number=-1;
-  people:People;
+  people:People=new People();
   constructor(private service:HardCodedServicesService,private dataservice:DataService,private router:Router){}
   handleLogOut(){
     this.service.LogOut();

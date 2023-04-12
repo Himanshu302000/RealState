@@ -28,6 +28,7 @@ export class SignupComponent {
       }
     this.service.postUserData(this.people).subscribe(res=>{
       console.log(res);
+      alert("Signed Up Successfully")
       this.route.navigate(['']);
     },
     error=>{

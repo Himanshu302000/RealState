@@ -6,5 +6,5 @@
 
     <li style="float:right"><a class="active adjust" *ngIf="!loggedIn" routerLink="log in">Login</a></li>
     <li style="float:right"><a class="active adjust"  *ngIf="loggedIn" routerLink="logout">LogOut</a></li>
-    <li style="float:right"><a class="active adjust" *ngIf="!loggedIn" routerLink="logout">Register</a></li>
+    <li style="float:right"><a class="active adjust"  *ngIf="!loggedIn" (click)="handleRegister()" routerLink="logout">Register</a></li>
   </ul>
