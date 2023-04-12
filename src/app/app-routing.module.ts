@@ -38,6 +38,11 @@ const routes: Routes = [
     path:'propertycard',
     component:PropertycardComponent,
     canActivate:[RouteGuardServiceService]
+  },
+  {
+    path:'propertycard/:id',
+    component:PropertycardComponent,
+    canActivate:[RouteGuardServiceService]
   }
   ,
   {

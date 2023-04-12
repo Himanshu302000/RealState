@@ -31,7 +31,7 @@ export class HousesComponent implements OnInit {
   handleView()
   {
     console.log("Handle View");
-    this.router.navigate(['propertycard']);
+    this.router.navigate(['propertycard',this.id]);
   }
 
   ngOnInit(): void {

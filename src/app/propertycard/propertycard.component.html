@@ -16,7 +16,7 @@
             <p class="txt2">{{item.description}}</p>
         </div>
         <div class="footer">
-            <p><a class="waves-effect waves-light btn" (click)="handleOwner(item.userId,item.id)"  >Owner Details</a><a id="heart" (click)="doLike(item.id)"><span class="like"><i class="fab fa-gratipay"></i>Like<span style="margin-left: 2px;">{{item.likes}}</span></span></a></p>
+            <p><a class="waves-effect waves-light btn" (click)="handleOwner(item.userId,item.id)"  >Owner Details</a><a id="heart" (click)="doLike(item.id,item.userId)"><span class="like"><i class="fab fa-gratipay"></i>Like<span style="margin-left: 2px;">{{item.likes}}</span></span></a></p>
             <p class="txt3"><i class="far fa-clock"></i>10 Minutes Ago <span class="comments"><i class="fas fa-comments"></i>45 Comments</span></p>
         </div>
     </div>
